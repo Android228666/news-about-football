@@ -3,26 +3,27 @@
   padding: 0px;
   box-sizing: border-box;
 }
-/*body {
-  background: url(/img/фон2.jpg);
+body {
+  background: url(/img/back-register.jpg);
 }
-.div1 {
+form {
   background: rgb(255, 255, 255);
   margin-left: 500px;
   margin-right: 580px;
   margin-top: 250px;
 }
 .button {
+  height: 65px;
   text-decoration: none;
   outline: none;
   display: inline-block;
   padding: 20px 30px;
   margin: 10px 100px;
   position: relative;
-  color: rgb(255, 255, 255);
-  border: 5px solid orange;
-  background: black;
-  font-weight: 300;
+  color: rgb(0, 0, 0);
+  border: 5px solid black;
+  background: orange;
+  font-weight: 900;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;

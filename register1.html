@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background: black;
+      }
+      h1 {
+        padding-top: 250px;
+        color: red;
+      }
+    </style>
+
+    <script type="text/javascript">
+      var t = setInterval("time1()", 1000);
+
+      function time1() {
+        t++;
+        if (t == 5) {
+          window.location = "http://google.com";
+        }
+      }
+    </script>
+  </head>
+  <body onload="time1()">
+    <div>
+      <h1 align="center">
+        Вход на сайт запрещен, потому что вам меньше 16 лет!!!
+      </h1>
+    </div>
+  </body>
+</html>

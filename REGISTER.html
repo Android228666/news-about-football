@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AnKhoFotball</title>
-    <link rel="stylesheet" href="./css/REGISTER.css" />
+    <link rel="stylesheet" href="./css/register.css" />
     <link rel="icon" href="/img/football.svg" />
 
     <script type="text/javascript">
@@ -12,36 +12,36 @@
         var fail = "Ви не ввели имя.";
         var fail2 = "Ви не ввели пароль.";
         var fail3 = "Пароли не совпадают.";
-        var fail4 = "Укажите пол.";
+        var fail4 = "Введите email в нужной форме.";
+        var fail5 = "Ви не ввели возраст.";
 
         var name = form.name.value;
         var password = form.password.value;
         var Repassword = form.Repassword.value;
-        var state = form.state.value;
+        var year = form.year.value;
+        var email = form.email.value;
+        var e = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i;
 
         if (name == "" || name == " ") alert(fail);
+        else if (year == "") alert(fail5);
+        else if (e.test(email) == false) alert(fail4);
         else if (password == "") alert(fail2);
         else if (password != Repassword) alert(fail3);
-        else if (state == "") alert(fail4);
+        else if (year < 16) window.location = "/register1.html";
+        else window.location = "/index.html";
       }
     </script>
   </head>
 
   <body>
     <form action="" method="post" name="test" id="form">
+      <h1 align="center">Регистрация:</h1>
       <label for="name">Имя:</label>
-      <input
-        class="button"
-        type="text"
-        name="name"
-        placeholder="Имя"
-        id="name"
-        autofocus
-      />
+      <input type="text" name="name" placeholder="Имя" id="name" autofocus />
       <br />
-      <p>Возраст: <input type="number" size="3" /><span></span></p>
+      <p>Возраст: <input type="number" name="year" size="3" /><span></span></p>
       <label for="name">Email:</label>
-      <input type="text" name="email" placeholder="Email" required /><br />
+      <input type="text" name="email" placeholder="Email" /><br />
 
       <label for="password">Пароль:</label>
       <input
@@ -58,15 +58,7 @@
         placeholder="Повторите пароль"
         id="Repassword"
       /><br />
-      <label>Укажите пол:</label><br />
-      <input type="checkbox" name="state" id="male" value="Мужской" /><label
-        >Мужской</label
-      ><br />
-      <input type="checkbox" name="state" id="female" value="Женский" /><label
-        >Женский</label
-      >
 
-      <br />
       <input
         class="button"
         type="button"
