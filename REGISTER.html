@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnKhoFotball</title>
+    <link rel="stylesheet" href="./css/REGISTER.css" />
+    <link rel="icon" href="/img/football.svg" />
+
+    <script type="text/javascript">
+      function register(form) {
+        var fail = "Ви не ввели имя.";
+        var fail2 = "Ви не ввели пароль.";
+        var fail3 = "Пароли не совпадают.";
+        var fail4 = "Укажите пол.";
+
+        var name = form.name.value;
+        var password = form.password.value;
+        var Repassword = form.Repassword.value;
+        var state = form.state.value;
+
+        if (name == "" || name == " ") alert(fail);
+        else if (password == "") alert(fail2);
+        else if (password != Repassword) alert(fail3);
+        else if (state == "") alert(fail4);
+      }
+    </script>
+  </head>
+
+  <body>
+    <form action="" method="post" name="test" id="form">
+      <label for="name">Имя:</label>
+      <input
+        class="button"
+        type="text"
+        name="name"
+        placeholder="Имя"
+        id="name"
+        autofocus
+      />
+      <br />
+      <p>Возраст: <input type="number" size="3" /><span></span></p>
+      <label for="name">Email:</label>
+      <input type="text" name="email" placeholder="Email" required /><br />
+
+      <label for="password">Пароль:</label>
+      <input
+        type="password"
+        name="password"
+        placeholder="Пароль"
+        id="password"
+      /><br />
+
+      <label for="Repassword">Повторите пароль:</label>
+      <input
+        type="password"
+        name="Repassword"
+        placeholder="Повторите пароль"
+        id="Repassword"
+      /><br />
+      <label>Укажите пол:</label><br />
+      <input type="checkbox" name="state" id="male" value="Мужской" /><label
+        >Мужской</label
+      ><br />
+      <input type="checkbox" name="state" id="female" value="Женский" /><label
+        >Женский</label
+      >
+
+      <br />
+      <input
+        class="button"
+        type="button"
+        onclick="register(document.getElementById('form'))"
+        name="button"
+        value="Готово"
+      />
+    </form>
+  </body>
+</html>
