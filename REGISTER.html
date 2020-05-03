@@ -26,6 +26,8 @@
         else if (year == "") alert(fail5);
         else if (e.test(email) == false) alert(fail4);
         else if (password == "") alert(fail2);
+        else if (password.length < 8)
+          alert("Введите нужное количество символов.");
         else if (password != Repassword) alert(fail3);
         else if (year < 16) window.location = "/register1.html";
         else window.location = "/index.html";
@@ -47,7 +49,7 @@
       <input
         type="password"
         name="password"
-        placeholder="Пароль"
+        placeholder="Пароль < 8 символов "
         id="password"
       /><br />
 
