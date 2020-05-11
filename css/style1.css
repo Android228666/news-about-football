@@ -12,6 +12,9 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   margin-right: 30px;
 }
+p {
+  margin-left: 500px;
+}
 
 .div1 {
   background: rgb(0, 0, 0);
@@ -75,6 +78,7 @@ body {
 }
 .a1:hover {
   background: orange;
+  color: black;
 }
 .a2 {
   text-decoration: none;
@@ -129,6 +133,7 @@ body {
 }
 .a2:hover {
   background: orange;
+  color: black;
 }
 .a3 {
   text-decoration: none;
@@ -183,6 +188,7 @@ body {
 }
 .a3:hover {
   background: orange;
+  color: black;
 }
 .a4 {
   text-decoration: none;
@@ -237,6 +243,7 @@ body {
 }
 .a4:hover {
   background: orange;
+  color: black;
 }
 .a5 {
   text-decoration: none;
@@ -291,6 +298,7 @@ body {
 }
 .a5:hover {
   background: orange;
+  color: black;
 }
 
 .contacts {
